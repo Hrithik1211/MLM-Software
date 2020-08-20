@@ -174,7 +174,7 @@ function level1button(mobile){
 }
 function logout(){
     firebase.auth().signOut();
-    window.location.href="/login.html"
+    window.location.href="/index.html"
 }
 let users = new Array()  ;
 function profileclick(){

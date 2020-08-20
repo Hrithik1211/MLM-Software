@@ -174,7 +174,7 @@ function writesales(time,classname,subject,mode,amount,salesamount,businessvalue
 
 function logout(){
     firebase.auth().signOut();
-    window.location.href="/login.html"
+    window.location.href="/index.html"
 }
 
 
