@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLM Software</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+   
+  
+  <h1 id="mlmheading">MLM Software</h1>
+  <button onclick="logout()">LOGOUT</button>
+    <img src="/image.jpg" id="profile" onclick="commission()"></img>
+    <br><br><br><br>
+  </div><div id="searcharea" >
+    <div style="float: right;">
+      <input type="text" placeholder="Search" id="search" ><button onclick="searchbutton() " id="searbutton">Search</button></div><br><br>
+    
+    
+   </div>
+    
+    
+      <button class="menu">Menu</button><button type="button" onclick="level1button() " class="company">Company</button><button class="user" onclick="openForm()">Add User</button>
+      
+    <div class="form-popup" id="myForm">
+  <form  class="form-container">
+    <h2>Register</h2>
+
+    <input type="text" placeholder="Enter Name" id="username" required>
+    <input type="text" placeholder="Enter Mobile" id="mobilenumber" required>
+    <input type="email" placeholder="Enter Email" id="psw" required>
+    <input type="text" placeholder="Enter PartnerId" id="partnerid" required>
+    <button type="submit" class="btn" onclick="registerbutton() ">Register</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+    <div class="contentlevel" id="level1">
+      
+    </div>
+   
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+ <script src="/JavaScript/mlm.js"></script>
+
+</body>
+</html>

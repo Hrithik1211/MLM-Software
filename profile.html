@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/profilestyle.css">
+</head>
+<body>
+    
+   
+    
+    <h1 id="heading" style="border: 2px solid blue;text-align: center;">MLM Software</h1>
+  
+  
+  
+  
+  <button onclick="logout() ">logout</button>
+  
+   <button class="salesentry" onclick="salesentry()">Add New Sales Entry</button><br>
+   <br> <br>
+   <div class="details">
+        <p id="partnerid">Partner Id</p>
+        <p id="username"> Name</p>
+        <p id="mobile">Mobile</p>
+        <p id="email">Email</p>
+        <p id="upline">Upline Id</p>
+        <p id="uplinename">Upline Name</p>
+    </div>
+    <div class="form-popup" id="myForm">
+        
+    <form  class="form-container">
+      
+    
+        <input type="date" placeholder="Enter Name" id="time" required>
+        <select id="class">
+            <option>I</option>
+            <option>II</option>
+            <option>III</option>
+            <option>IV</option>
+            <option>V</option>
+            <option>VI</option>
+            <option>VII</option>
+            <option>VIII</option>
+            <option>IX</option>
+            <option>X</option>
+            <option>XI</option>
+            <option>XII</option> 
+        </select>
+        <select id="subject">
+            <option>Subject</option>
+        </select>
+        <select id="mode">
+
+            <option>VC</option>
+            <option>LT</option>
+            <option>Live</option>
+       
+        </select>
+        
+        <input type="text" placeholder="Amount" id="amount" required>
+        <input type="text" placeholder="Sales Amount" id="salesamount" required>
+        <input type="text" placeholder="Business Value" id="businessvalue" required>
+        <input type="text" placeholder="Commission" id="commission" required>
+        
+        <button type="submit" class="btn" onclick="registerbutton() ">Register</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+      </div>
+
+      <div id="saleslist">
+
+      </div>
+
+         
+    
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+ 
+    <script src="/JavaScript/profile.js"></script>
+</body>
+</html>
