@@ -3,6 +3,67 @@
   <title>Firebase Login</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="/CSS/login.css" />
+<style>
+  body {
+    background: #fff;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+  }
+  
+  input, button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+  }
+  
+  .main-div, .loggedin-div {
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 150px;
+    padding: 20px;
+  }
+  
+  
+  .main-div input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .main-div input:focus {
+    border: 1px solid #777;
+  }
+  
+  .main-div button, .loggedin-div button {
+    background: #5d8ffc;
+    color: #fff;
+    border: 1px solid #5d8ffc;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .main-div button:hover, .loggedin-div button:hover {
+    background: #fff;
+    color: #5d8ffc;
+    border: 1px solid #5d8ffc;
+    cursor: pointer;
+  }
+  
+</style>
 </head>
 <body>
 
@@ -29,7 +90,75 @@
          https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+     <script>
+       var firebaseConfig = {
+     apiKey: "AIzaSyC8cmIQbKIMNhEnNgeoFN7w4gNJBirSFM4",
+    authDomain: "mlmsw-83741.firebaseapp.com",
+    databaseURL: "https://mlmsw-83741.firebaseio.com",
+    projectId: "mlmsw-83741",
+    storageBucket: "mlmsw-83741.appspot.com",
+    messagingSenderId: "993714721375",
+    appId: "1:993714721375:web:629775883606b243dd01ea",
+    measurementId: "G-00MK9NX1W7"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+
+
+  firebase.analytics();
+ function login(){
+     let email = document.getElementById("email").value;
+     let password = document.getElementById("password").value;
+     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        alert(errorMessage)
+        // ...
+      });
+ }
+ firebase.auth().onAuthStateChanged(function(user) {
      
+    if (user) {
+      // User is signed in.
+      window.location.href="/mlm.html"
+   
+      var displayName = user.displayName;
+      var email = user.email+"";
+      
+      window.location.href="/mlm.html"
+   
+
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+
+
+      // ...
+    } else {
+      // User is signed out.
+      // ...
+    }
+  });
+  function register(){
+      document.getElementById("heading").innerText="Register";
+      document.getElementById("login").style.display="none";
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+       
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        alert(errorMessage)
+        // ...
+      });
+  }
+     </script>
   <script src="/JavaScript/login.js"></script>
 
 </body>

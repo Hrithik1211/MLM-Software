@@ -5,6 +5,306 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MLM Software</title>
     <link rel="stylesheet" href="/CSS/style.css">
+    <style>
+      h1{
+    color: blue;
+    text-align: center;
+}
+.company {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    width: 75%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  .companylevel1 {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    width: 70%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+   .company:hover,.companylevel1:hover {
+    background-color: #555;
+  }
+  
+  .contentlevel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  .user{
+    background-color: rgb(13, 238, 32);
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    width: 15%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 1px;
+  margin-top: 1px;
+  
+      
+  }
+  body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password],.form-container input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,.form-container input[type=email]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.companylevel2 {
+  background-color: rgb(66, 233, 149);
+  color: white;
+  cursor: pointer;
+  width: 70%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+
+  height: 50px;
+}
+.user1{
+  background-color: rgb(95, 199, 81);
+  color: white;
+  height: 50px;
+  cursor: pointer;
+  width: 20%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+    
+}
+.user2{
+  background-color: rgb(27, 134, 233);
+  color: white;
+  cursor: pointer;
+  width: 20%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  
+height: 50px;
+    
+}
+.user3{
+  background-color: rgb(168, 27, 233);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 25%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+    margin-bottom: 1px;
+  margin-top: 1px;
+  
+}
+.companylevel3 {
+  background-color: rgb(255, 117, 248);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 75%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+#profile{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-content: center;
+  float: right;
+}
+.commission{
+  background-color: rgb(27, 134, 233);
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  width: 15%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  
+
+    
+}
+.sales{
+  background-color: rgb(224, 52, 167);
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  width: 10%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  
+
+    
+}
+
+.search{
+  background-color: rgb(27, 134, 233);
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  width: 10%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  
+
+    
+}
+ #searchbox{
+  float: right;
+  padding: 5px;
+  border: none;
+  margin-top: 5px;
+
+  margin-right: 16px;
+  font-size: 17px;
+}
+#search{
+  padding: 5px;
+  border: none;
+  margin-top: 5px;
+  font-size: 17px;
+}
+#searbutton{
+  background-color: rgb(224, 52, 167);
+  color: white;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  padding: 5px;
+ 
+}
+.menu,.menulevel1,.menulevel2{
+  height: 50px;
+  border: none;
+  width: 10%;
+  background-color: white;
+    cursor: pointer;
+   
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    
+  
+ color: #4CAF50;
+}
+
+.active{
+  color: #4CAF50;
+  background-color:yellow;
+}
+.searchlist{
+  width: 100%;
+  border: none;
+  height: 50px;
+  margin: 1px;
+  background-color: greenyellow;
+  cursor: pointer;
+}
+    </style>
 </head>
 <body>
    
@@ -47,7 +347,299 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
- <script src="/JavaScript/mlm.js"></script>
+<script>
+  var button="";
+
+var col =  document.getElementsByClassName("menu");
+var j;
+var userlevel="";
+
+
+
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC8cmIQbKIMNhEnNgeoFN7w4gNJBirSFM4",
+    authDomain: "mlmsw-83741.firebaseapp.com",
+    databaseURL: "https://mlmsw-83741.firebaseio.com",
+    projectId: "mlmsw-83741",
+    storageBucket: "mlmsw-83741.appspot.com",
+    messagingSenderId: "993714721375",
+    appId: "1:993714721375:web:629775883606b243dd01ea",
+    measurementId: "G-00MK9NX1W7"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+
+
+  firebase.analytics();
+ 
+  profileclick();
+ /*
+button="";
+for(j=1;j<5;j++){
+    button+="<button class=\"companylevel1\">MLM User "+j+"</button><button class=\"user1\" onclick=\"openForm1()\">Add User</button>"
+    +"<div id=\"level"+j+"user\" >This is mlm software user </div>";
+    
+}*/
+// document.getElementById("level1").innerHTML=button+document.getElementById("level1").innerHTML;
+
+for(j=0;j<col.length;j++){
+    
+    col[j].addEventListener("click",function(){
+        this.classList.toggle("active");
+        var content = document.getElementById("level1");
+        if (content.style.display==="block"){
+            content.style.display = "none";
+        }
+        else{
+            content.style.display = "block";
+        }
+    });
+}
+
+
+
+
+
+  
+
+
+/*
+for(j=1;j<5;j++){
+    button+="<button class=\"companylevel1\">MLM Software Level1 User "+j+"</button><button class=\"user1\" onclick=\"openForm1()\">Add User</button>"
+    +"<div id=\"level"+j+"user\" >This is mlm software user "+j+"</div>";
+}
+*/
+
+
+var level1user="";
+var level2user="";
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+   userlevel = "company";
+}
+function openForm1(clickedid) {
+    document.getElementById("myForm").style.display = "block";
+    userlevel = "Level1";
+    level1user=clickedid;
+    
+
+
+
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function openForm2(clickedid) {
+    document.getElementById("myForm").style.display = "block";
+    userlevel="Level2";
+    level1user=clickedid.substring(0,10);
+    level2user=clickedid.substring(10);
+}
+
+
+function writeUserData(level,mobile, name, email,partnerid) {
+    firebase.database().ref('users/' + mobile ).set({
+      username: name,
+      email: email,
+      partnerid:partnerid
+     // organisation: companyname
+    });
+    if(userlevel.localeCompare("company")==0)
+   {
+         firebase.database().ref(level+'/'+mobile).set(level);
+
+    }
+    if(userlevel.localeCompare("Level1")==0){
+        firebase.database().ref('company'+'/'+level1user+'/'+mobile).set(level);
+        firebase.database().ref('users'+'/'+mobile+'/'+'upline').set(level1user);
+        
+    }
+    if(userlevel.localeCompare("Level2")==0){
+        firebase.database().ref('company'+'/'+level1user+'/'+level2user+'/'+mobile).set(level);
+        firebase.database().ref('users'+'/'+mobile+'/'+'upline').set(level2user+" "+level1user);
+        
+    }
+    alert("New User Added")
+    
+  }
+
+
+
+  
+
+
+  
+function registerbutton(){
+    var username = document.getElementById("username").value;
+   // var companyname = document.getElementById("companyname").value;
+    var mobile = document.getElementById("mobilenumber").value;
+    var email = document.getElementById("psw").value;
+    var partnerid = document.getElementById("partnerid").value;
+    
+ if(username.length&&mobile.length&&email.length&&partnerid.length)
+    writeUserData(userlevel,mobile,username,email,partnerid);
+    
+}
+
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+
+
+function commission(){
+    window.location.href = "/commission.html"
+}
+function level1button(mobile){
+  
+  localStorage.setItem("mobile",mobile);
+    window.location.href="/profile.html"
+    
+}
+function logout(){
+    firebase.auth().signOut();
+    window.location.href="/index.html"
+}
+let users = new Array()  ;
+function profileclick(){
+    
+  
+   
+    var heading = document.getElementById("mlmheading");
+    var ref =  firebase.database().ref().child('text');
+ document.getElementById("level1").innerHTML="" 
+    ref.on('value',function(snapshot){
+        heading.innerText=(snapshot.val());
+    });
+  
+    var userName="";
+    ref = firebase.database().ref('company');
+    button=""; 
+   
+    ref.on('child_added', function(snapshot){
+          userName = snapshot.key;
+      //     if(userName.startsWith(searchname))
+   {
+      
+          button+="<button class=\"menulevel1\" >Menu</button><button id=\""+userName+"\" onclick=\"level1button(this.id)\" class=\"companylevel1\">"+userName+"</button><button id=\""+userName+"\"class=\"user1\" onclick=\"openForm1(this.id)\">Add User</button>"
+      +"<div id=\"level"+j+"user\" >This is mlm software user </div><br>";
+      
+      }
+      document.getElementById("level1").innerHTML=button;
+     
+      var col1=document.getElementsByClassName("menulevel1");
+  
+      for(j=0;j<col1.length;j++){
+          col1[j].nextElementSibling.nextElementSibling.nextElementSibling.style.display="none";
+          col1[j].addEventListener("click",function(){
+              this.classList.toggle("active");
+              
+  
+              
+      
+      
+           var content = this.nextElementSibling.nextElementSibling.nextElementSibling;
+           content.innerHTML="";   
+           var buttonlevel2="";var str=this.nextElementSibling.innerText+"";
+              let level=this.nextElementSibling.innerText;
+              var data = firebase.database().ref('company').child(this.nextElementSibling.innerText);
+              data.on('child_added',function(snapshot){
+                  let user = snapshot.key;
+        //          if(user.startsWith(searchname))
+                  {
+                      buttonlevel2="<button class=\"menulevel2\">Menu</button><button id=\""+user+" "+level+"\" class=\"companylevel2\"onclick=\"level1button(this.id)\" >"+user+"</button><button class=\"user2\" id=\""+str+snapshot.key+"\" onclick=\"openForm2(this.id)\">Add User</button>"
+                      +"<div id=\"level"+j+"user\" ></div>";
+          //            users.push(buttonlevel2);
+                  } content.innerHTML += buttonlevel2;
+              });
+ //     buttonlevel2="<input type=\"search\" id=\"search\" placeholder=\"Search\"><br><br>"+buttonlevel2;
+             
+              if (content.style.display==="block"){
+                  content.style.display = "none";
+              }
+              else{
+                  content.style.display = "block";
+              }
+              var col2 = document.getElementsByClassName("menulevel2");
+              for(var l=0;l<col2.length;l++){
+                  col2[l].addEventListener("click",function(){
+                      this.classList.toggle("active");
+                      var con = this.nextElementSibling.nextElementSibling.nextElementSibling;
+                      con.innerHTML="";
+                      var buttonlevel3="";
+                      var dat = firebase.database().ref('company').child(str).child(this.nextElementSibling.innerText.substring(0,10));
+                      let level = this.nextElementSibling.innerText;
+                      dat.on('child_added',function(snapshot){
+                      let user=snapshot.key;
+            //          if(user.startsWith(searchname))
+                      {
+                        buttonlevel3="<button id=\""+user+" "+level+" "+str+"\" onclick=\"level1button(this.id)\" class=\"companylevel3\">"+user+"</button><button class=\"user3\" id=\""+str+snapshot.key+"\" onclick=\"openForm2(this.id)\">Add User</button>"
+                          +"<div id=\"level"+j+"user\" ></div>";
+              //          users.push(buttonlevel3)
+              con.innerHTML+=buttonlevel3; 
+                        }
+                  });
+            //  buttonlevel3="<input type=\"search\" id=\"search\" placeholder=\"Search\"><br><br>"+buttonlevel3;
+     
+                  
+                  if (con.style.display==="block"){
+                      con.style.display = "none";
+                  }
+                  else{
+                      con.style.display = "block";
+                  }
+  
+          
+  
+                  });
+              }
+          });
+      }
+        //var button="";
+    });
+}
+function searchbutton(){
+    let username = ""+document.getElementById("search").value;
+    users = new Array();
+    if(username.length){
+        document.getElementById("level1").innerHTML="";
+    firebase.database().ref('users').on('child_added',function(snapshot){
+        if(snapshot.key.startsWith(username)){
+            let upline = snapshot.child("upline").val();
+            document.getElementById("level1").innerHTML+="<button id=\""+snapshot.key+" "+upline+"\" class=\"searchlist\"onclick=\"level1button(this.id)\" >"+snapshot.key+"</button>";
+        }
+    });}
+    else
+    profileclick()
+}
+</script> 
+<script src="/JavaScript/mlm.js"></script>
 
 </body>
 </html>
